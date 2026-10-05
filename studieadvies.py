@@ -1,4 +1,5 @@
 from studieadviestext import *
+aantalWeken = int(input("hoeveel weken volg je deze opleiding"))
 
 print(COMPETENTIE_STELLING_1)
 antwoord1 = int(input(OPTIES))
@@ -25,18 +26,20 @@ antwoord5 = int(input(OPTIES))
 
 print("Jouw antwoord was:", antwoord5)
 
-print(COMPETENTIE_STELLING_6)
-antwoord6 = int(input(OPTIES))
+if aantalWeken >= 10:
+    print(COMPETENTIE_STELLING_6)
+    antwoord6 = int(input(OPTIES))
 
-print("Jouw antwoord was:", antwoord6)
+    print("Jouw antwoord was:", antwoord6)
 
-print(COMPETENTIE_STELLING_7)
-antwoord7 = int(input(OPTIES))
+    print(COMPETENTIE_STELLING_7)
+    antwoord7 = int(input(OPTIES))
 
-print("Jouw antwoord was:", antwoord7)
+    print("Jouw antwoord was:", antwoord7)
 
-eindscore = (antwoord1 + antwoord2 + antwoord3 + antwoord4 + antwoord5 + antwoord6 + antwoord7)/7
-
+    eindscore = (antwoord1 + antwoord2 + antwoord3 + antwoord4 + antwoord5 + antwoord6 + antwoord7)/7
+else:
+    eindscore = (antwoord1 + antwoord2 + antwoord3 +antwoord4 + antwoord5)/5
 if eindscore <= 2:     
     print(COMPETENTIE_ADVIES_ZORGELIJK)
 elif eindscore <= 3:
